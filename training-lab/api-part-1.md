@@ -18,7 +18,7 @@
 
 * Under this directory you will notice the following standard project structure.
 
-![image01](/uploads/97c142ebdb03b179f411e94a5f2bea93/image01.PNG)
+![image01](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image01.PNG)
 
 * The POM - The pom.xml file is the core of a project's configuration in Maven. It is a single configuration file that contains the majority of information required to build a project in just the way you want. The POM is huge and can be daunting in its complexity, but it is not necessary to understand all of the intricacies just yet to use it effectively. This project's POM is:
 
