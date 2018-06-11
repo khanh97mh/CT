@@ -18,11 +18,11 @@
 
 * Under this directory you will notice the following standard project structure.
 
-![image01](/uploads/97c142ebdb03b179f411e94a5f2bea93/image01.PNG)
+![image01](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image01.PNG)
 
 * The POM - The pom.xml file is the core of a project's configuration in Maven. It is a single configuration file that contains the majority of information required to build a project in just the way you want. The POM is huge and can be daunting in its complexity, but it is not necessary to understand all of the intricacies just yet to use it effectively. This project's POM is:
 
-![image02](/uploads/5146b7cd936cfe4450e0763f3126ffd7/image02.PNG)
+![image02](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image02.PNG)
 
 ## 2.  Apply Spring Boot to training-lab-api project
 
@@ -38,7 +38,7 @@
     	</parent>
 ```
 
-![image04](/uploads/ce2f2ac7248e923408d7ff4d2ceb94ed/image04.PNG)
+![image04](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image04.PNG)
 
 * Since we are developing a json web service application, we add a spring-boot-starter-web dependency.
 
@@ -49,7 +49,7 @@
         </dependency>
 ```
 
-![image05](/uploads/7b973b670742aa53755ef535c692e6da/image05.PNG)
+![image05](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image05.PNG)
 
 * To create an executable jar, we need to add the spring-boot-maven-plugin to our pom.xml. To do so, insert the following lines just below the dependencies section:
 
@@ -62,7 +62,7 @@
         	</plugins>
 ```
 
-![image06](/uploads/49a19d051290fdc97b9bf979ec6d75db/image06.PNG)
+![image06](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image06.PNG)
 
 * Create tlab.api package under com.tma package
 
@@ -70,15 +70,15 @@
 
 * Delete App and AppTest classes in com.tma package of main and test folders
 
-![image03](/uploads/4e2cc171c9c9e259fbdf289a811dbc5b/image03.PNG)
+![image03](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image03.PNG)
 
 * Edit Application class to make it become a launcher of Spring Boot app
 
-![image07](/uploads/8a32b9157dd70c14bdf28a4b3602bb11/image07.PNG)
+![image07](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image07.PNG)
 
 * Add @SpringBootApplication annotation
 
-![image08](/uploads/517779e849fe52b9021325926bdcc1d8/image08.PNG)
+![image08](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image08.PNG)
 
 @SpringBootApplication is a convenience annotation that adds all of the following:
 
@@ -94,7 +94,7 @@
 
     The main() method uses Spring Boot’s SpringApplication.run() method to launch an application. Did you notice that there wasn’t a single line of XML? No web.xml file either. This web application is 100% pure Java and you didn’t have to deal with configuring any plumbing or infrastructure.
 
-![image09](/uploads/8444d5f4a6183d74565400b4bcde2c43/image09.PNG)
+![image09](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image09.PNG)
 
 * The final code of Application class as below:
 
@@ -118,9 +118,9 @@
     - Create HelloController class
     - Add annotations and methods as below
 
-![image10](/uploads/7fdb3900b7f74f1c81f50fe0d2a00c02/image10.PNG)
+![image10](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image10.PNG)
 
-![image11](/uploads/0b12555b7e76c2379267f529f612a179/image11.PNG)
+![image11](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image11.PNG)
 
 * Notes:
 
@@ -134,21 +134,21 @@
 
     Right click on Application class and select Run 'Application'
 
-![image12](/uploads/290414d3c1e2761a5f2bfd01175a148b/image12.PNG)
+![image12](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image12.PNG)
 
     The following is the log of started app
 
-![image13](/uploads/e78c190649888b8faaed427346956354/image13.PNG)
+![image13](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image13.PNG)
 
 * Check services on browser
 
     http://localhost:8080/api/
 
-![image14](/uploads/2e6f783ee2961c830540ef2ad62ee788/image14.PNG)
+![image14](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image14.PNG)
 
     http://localhost:8080/api/hello
 
-![image15](/uploads/f38ba7480e725e09325302dc8e986e07/image15.PNG)
+![image15](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image15.PNG)
 
 * Change port number of Spring app
 
@@ -156,17 +156,17 @@
 
     Add application.properties file, and then add server.port=9090 into this file
 
-![image16](/uploads/024fa6a2821a80d037f811cdf29dff9c/image16.PNG)
+![image16](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image16.PNG)
 
 * Test service with new port 9090
 
     http://localhost:9090/api/
 
-![image17](/uploads/c3f6773fd89c756a696dd6f8daa3d694/image17.PNG)
+![image17](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image17.PNG)
 
 * To see resource icon on resources folder, right click on resources folder and select Mark Directory As/ Resources Root
 
-![image18](/uploads/1a57f8c070a3e6a93fd5f995468c2c66/image18.PNG)
+![image18](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image18.PNG)
 
 
 
