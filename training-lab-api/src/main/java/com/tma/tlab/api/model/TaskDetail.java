@@ -15,7 +15,6 @@ public class TaskDetail implements Serializable {
 
 	@JsonApiId
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "task_detail_id", unique = true, nullable = false)
 	private Long taskDetailId;
 

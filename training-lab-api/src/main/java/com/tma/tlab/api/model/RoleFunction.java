@@ -12,10 +12,9 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @Table(name = "role_function")
 public class RoleFunction implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@JsonApiId
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "role_id")
 	private String roleId;
 

@@ -15,13 +15,13 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @Table(name = "user_role")
 public class UserRole implements Serializable {
 	private static final long serialVersionUID = 1L;
-
+	
 	@JsonApiId
 	@Id
-	@Column(name = "user_id", insertable = false, updatable = false, unique = true, nullable = false)
+	@Column(name = "user_id")
 	private String userId;
 
-	@Column(name = "role_id", insertable = false, updatable = false, unique = true, nullable = false, length = 50)
+	@Column(name = "role_id")
 	private String roleId;
 
 	public String getUserId() {

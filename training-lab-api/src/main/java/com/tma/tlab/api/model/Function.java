@@ -9,12 +9,11 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @JsonApiResource(type = "functions")
 @Entity
 @Table(name="function")
-@NamedQuery(name="Function.findAll", query="SELECT f FROM Function f")
 public class Function implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	@JsonApiId
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	@Column(name="function_id", unique=true, nullable=false, length=50)
 	private String functionId;
 
