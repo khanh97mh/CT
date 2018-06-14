@@ -18,10 +18,10 @@ public class Skill implements Serializable {
 	@Column(name = "skill_id", unique = true, nullable = false)
 	private Long skillId;
 
-	@Column(nullable = false, length = 255)
+	@Column(name = "description", nullable = false, length = 255)
 	private String description;
 
-	@Column(nullable = false, length = 45)
+	@Column(name = "name", nullable = false, length = 45)
 	private String name;
 
 	public Skill() {

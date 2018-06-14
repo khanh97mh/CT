@@ -11,6 +11,9 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import com.tma.tlab.api.e.EnumQuestion;
+import com.tma.tlab.api.e.EnumQuestionChoice;
+import com.tma.tlab.api.e.EnumQuestionType;
 import com.tma.tlab.api.jpa.QuestionChoiceJpaRepository;
 import com.tma.tlab.api.model.QuestionChoice;
 
@@ -29,7 +32,7 @@ public class QuestionChoiceRepositoryImplTest {
 		QuestionChoice questionChoice = new QuestionChoice();
 		questionChoice.setChoiceId(1L);
 		questionChoice.setDescription("Description");
-		questionChoice.setCorrected("Corrected");
+		questionChoice.setCorrected(EnumQuestionChoice.Y);
 		questionChoice.setFillIn("FillIn");
 
 		repository.save(questionChoice);
@@ -42,7 +45,7 @@ public class QuestionChoiceRepositoryImplTest {
 		QuestionChoice questionChoice = new QuestionChoice();
 		questionChoice.setChoiceId(1L);
 		questionChoice.setDescription("Description");
-		questionChoice.setCorrected("Corrected");
+		questionChoice.setCorrected(EnumQuestionChoice.Y);
 		questionChoice.setFillIn("FillIn");
 		
 		when(jpaRepository.getOne(1L)).thenReturn(questionChoice);

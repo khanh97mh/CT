@@ -3,6 +3,8 @@ package com.tma.tlab.api.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.tma.tlab.api.e.EnumQuestionChoice;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiRelation;
 import io.katharsis.resource.annotations.JsonApiResource;
@@ -19,43 +21,53 @@ public class Schedule implements Serializable {
 	@Column(name = "schedule_id", unique = true, nullable = false)
 	private Long scheduleId;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "fri_a", length = 1)
-	private String friA;
+	private EnumQuestionChoice friA;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "fri_m", length = 1)
-	private String friM;
+	private EnumQuestionChoice friM;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "mon_a", length = 1)
-	private String monA;
+	private EnumQuestionChoice monA;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "mon_m", length = 1)
-	private String monM;
+	private EnumQuestionChoice monM;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "thu_a", length = 1)
-	private String thuA;
+	private EnumQuestionChoice thuA;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "thu_m", length = 1)
-	private String thuM;
+	private EnumQuestionChoice thuM;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "tue_a", length = 1)
-	private String tueA;
+	private EnumQuestionChoice tueA;
 
+	@Enumerated(EnumType.STRING)
 	@Column(name = "tue_m", length = 1)
-	private String tueM;
+	private EnumQuestionChoice tueM;
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "wed_a", length = 1)
+	private EnumQuestionChoice wedA;
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "wed_m", length = 1)
+	private EnumQuestionChoice wedM;
+
+	@Column(name = "week_id", length = 20)
+	private String weekId;
 
 	@JsonApiRelation
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
-
-	@Column(name = "wed_a", length = 1)
-	private String wedA;
-
-	@Column(name = "wed_m", length = 1)
-	private String wedM;
-
-	@Column(name = "week_id", length = 20)
-	private String weekId;
 
 	public Schedule() {
 	}
@@ -68,83 +80,83 @@ public class Schedule implements Serializable {
 		this.scheduleId = scheduleId;
 	}
 
-	public String getFriA() {
+	public EnumQuestionChoice getFriA() {
 		return this.friA;
 	}
 
-	public void setFriA(String friA) {
+	public void setFriA(EnumQuestionChoice friA) {
 		this.friA = friA;
 	}
 
-	public String getFriM() {
+	public EnumQuestionChoice getFriM() {
 		return this.friM;
 	}
 
-	public void setFriM(String friM) {
+	public void setFriM(EnumQuestionChoice friM) {
 		this.friM = friM;
 	}
 
-	public String getMonA() {
+	public EnumQuestionChoice getMonA() {
 		return this.monA;
 	}
 
-	public void setMonA(String monA) {
+	public void setMonA(EnumQuestionChoice monA) {
 		this.monA = monA;
 	}
 
-	public String getMonM() {
+	public EnumQuestionChoice getMonM() {
 		return this.monM;
 	}
 
-	public void setMonM(String monM) {
+	public void setMonM(EnumQuestionChoice monM) {
 		this.monM = monM;
 	}
 
-	public String getThuA() {
+	public EnumQuestionChoice getThuA() {
 		return this.thuA;
 	}
 
-	public void setThuA(String thuA) {
+	public void setThuA(EnumQuestionChoice thuA) {
 		this.thuA = thuA;
 	}
 
-	public String getThuM() {
+	public EnumQuestionChoice getThuM() {
 		return this.thuM;
 	}
 
-	public void setThuM(String thuM) {
+	public void setThuM(EnumQuestionChoice thuM) {
 		this.thuM = thuM;
 	}
 
-	public String getTueA() {
+	public EnumQuestionChoice getTueA() {
 		return this.tueA;
 	}
 
-	public void setTueA(String tueA) {
+	public void setTueA(EnumQuestionChoice tueA) {
 		this.tueA = tueA;
 	}
 
-	public String getTueM() {
+	public EnumQuestionChoice getTueM() {
 		return this.tueM;
 	}
 
-	public void setTueM(String tueM) {
+	public void setTueM(EnumQuestionChoice tueM) {
 		this.tueM = tueM;
 	}
 
-	public String getWedA() {
+	public EnumQuestionChoice getWedA() {
 		return this.wedA;
 	}
 
-	public void setWedA(String wedA) {
+	public void setWedA(EnumQuestionChoice wedA) {
 		this.wedA = wedA;
 	}
 
-	public String getWedM() {
+	public EnumQuestionChoice getWedM() {
 		return this.wedM;
 	}
 
-	public void setWedM(String wedM) {
+	public void setWedM(EnumQuestionChoice wedM) {
 		this.wedM = wedM;
 	}
 

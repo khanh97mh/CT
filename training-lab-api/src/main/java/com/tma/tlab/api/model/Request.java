@@ -21,7 +21,7 @@ public class Request implements Serializable {
 	@Column(name = "request_id", unique = true, nullable = false)
 	private Long requestId;
 
-	@Column(nullable = false, length = 45)
+	@Column(name = "description", nullable = false, length = 45)
 	private String description;
 
 	@Temporal(TemporalType.DATE)

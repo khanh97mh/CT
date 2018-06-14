@@ -1,9 +1,13 @@
 package com.tma.tlab.api.model;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.*;
 
 import io.katharsis.resource.annotations.JsonApiId;
+import io.katharsis.resource.annotations.JsonApiRelation;
 import io.katharsis.resource.annotations.JsonApiResource;
 
 @JsonApiResource(type = "functions")
@@ -17,7 +21,15 @@ public class Function implements Serializable {
 	@Column(name="function_id", unique=true, nullable=false, length=50)
 	private String functionId;
 
-	@Column(nullable=false, length=100)
+	@JsonApiRelation
+	@ManyToMany
+	@JoinTable(
+	        name = "role_functions",
+	        joinColumns = @JoinColumn(name = "function_id",referencedColumnName = "function_id"),
+	        inverseJoinColumns = @JoinColumn( name = "role_id", referencedColumnName = "role_id" ) )	
+	private Set<Role> roles = new HashSet<Role>();
+	
+	@Column(name = "name",nullable=false, length=100)
 	private String name;
 
 	public Function() {

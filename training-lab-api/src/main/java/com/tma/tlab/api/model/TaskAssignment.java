@@ -10,19 +10,19 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @JsonApiResource(type = "task_assignments")
 @Entity
 @Table(name = "task_assignment")
-@NamedQuery(name = "TaskAssignment.findAll", query = "SELECT t FROM TaskAssignment t")
 public class TaskAssignment implements Serializable {
 	private static final long serialVersionUID = 1L;
+
 	@JsonApiId
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "task_assignment_id", unique = true, nullable = false)
 	private Long taskAssignmentId;
 
-	@Column(nullable = false, length = 255)
+	@Column(name = "description", nullable = false, length = 255)
 	private String description;
 
-	@Column(nullable = false, length = 45)
+	@Column(name = "name", nullable = false, length = 45)
 	private String name;
 
 	@JsonApiRelation

@@ -3,13 +3,14 @@ package com.tma.tlab.api.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.tma.tlab.api.e.EnumCsvCandidate;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiResource;
 
 @JsonApiResource(type = "csv_candidates")
 @Entity
 @Table(name="csv_candidate")
-@NamedQuery(name="CsvCandidate.findAll", query="SELECT c FROM CsvCandidate c")
 public class CsvCandidate implements Serializable {
 	private static final long serialVersionUID = 1L;
 
@@ -22,13 +23,13 @@ public class CsvCandidate implements Serializable {
 	@Column(name="csv_id", nullable=false, length=100)
 	private String csvId;
 
-	@Column(length=255)
+	@Column(name = "description", length=255)
 	private String description;
 
-	@Column(length=45)
+	@Column(name = "email", length=45)
 	private String email;
 
-	@Column(length=45)
+	@Column(name = "faculty", length=45)
 	private String faculty;
 
 	@Column(name="full_name", length=45)
@@ -37,16 +38,17 @@ public class CsvCandidate implements Serializable {
 	@Column(name="graduation_year", length=45)
 	private String graduationYear;
 
-	@Column(length=45)
+	@Column(name = "phone", length=45)
 	private String phone;
 
-	@Column(length=45)
+	@Column(name = "position", length=45)
 	private String position;
 
-	@Column(nullable=false, length=1)
-	private String status;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status", nullable=false, length=1)
+	private EnumCsvCandidate status;
 
-	@Column(length=45)
+	@Column(name = "university", length=45)
 	private String university;
 
 	public CsvCandidate() {
@@ -124,11 +126,11 @@ public class CsvCandidate implements Serializable {
 		this.position = position;
 	}
 
-	public String getStatus() {
+	public EnumCsvCandidate getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(EnumCsvCandidate status) {
 		this.status = status;
 	}
 

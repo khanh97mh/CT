@@ -12,20 +12,20 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @Table(name = "task_template")
 public class TaskTemplate implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@JsonApiId
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "task_template_id", unique = true, nullable = false)
 	private Long taskTemplateId;
 
-	@Column(nullable = false, length = 255)
+	@Column(name = "description", nullable = false, length = 255)
 	private String description;
 
-	@Column(nullable = false)
+	@Column(name = "estimate", nullable = false)
 	private float estimate;
 
-	@Column(nullable = false, length = 45)
+	@Column(name = "name", nullable = false, length = 45)
 	private String name;
 
 	@JsonApiRelation

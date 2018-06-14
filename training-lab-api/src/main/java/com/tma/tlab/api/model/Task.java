@@ -8,17 +8,17 @@ import io.katharsis.resource.annotations.JsonApiResource;
 
 @JsonApiResource(type = "tasks")
 @Entity
-@Table(name="task")
-@NamedQuery(name="Task.findAll", query="SELECT t FROM Task t")
+@Table(name = "task")
 public class Task implements Serializable {
 	private static final long serialVersionUID = 1L;
+	
 	@JsonApiId
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
-	@Column(name="task_id", unique=true, nullable=false)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name = "task_id", unique = true, nullable = false)
 	private Long taskId;
 
-	@Column(nullable=false, length=45)
+	@Column(name = "description", nullable = false, length = 45)
 	private String description;
 
 	public Task() {

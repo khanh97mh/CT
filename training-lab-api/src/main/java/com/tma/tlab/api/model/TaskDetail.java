@@ -3,6 +3,8 @@ package com.tma.tlab.api.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.tma.tlab.api.e.EnumTaskDetail;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiRelation;
 import io.katharsis.resource.annotations.JsonApiResource;
@@ -18,17 +20,19 @@ public class TaskDetail implements Serializable {
 	@Column(name = "task_detail_id", unique = true, nullable = false)
 	private Long taskDetailId;
 
-	@Column(nullable = false, length = 255)
+	@Column(name = "description", nullable = false, length = 255)
 	private String description;
 
-	@Column(nullable = false)
+	@Column(name = "estimate", nullable = false)
 	private float estimate;
 
-	@Column(nullable = false, length = 45)
+	@Column(name = "name", nullable = false, length = 45)
 	private String name;
 
-	@Column(nullable = false, length = 1)
-	private String status;
+
+	@Enumerated(EnumType.STRING)
+	@Column(name = "status", nullable = false, length = 1)
+	private EnumTaskDetail status;
 
 	@JsonApiRelation
 	@ManyToOne
@@ -70,11 +74,11 @@ public class TaskDetail implements Serializable {
 		this.name = name;
 	}
 
-	public String getStatus() {
+	public EnumTaskDetail getStatus() {
 		return this.status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(EnumTaskDetail status) {
 		this.status = status;
 	}
 

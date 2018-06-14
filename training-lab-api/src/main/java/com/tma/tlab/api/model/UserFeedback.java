@@ -21,7 +21,7 @@ public class UserFeedback implements Serializable {
 	@Column(name = "user_feedback_id", unique = true, nullable = false)
 	private String userFeedbackId;
 
-	@Column(length = 45)
+	@Column(name = "description", length = 45)
 	private String description;
 
 	@Column(name = "feedback_date")
@@ -30,12 +30,12 @@ public class UserFeedback implements Serializable {
 	@JsonApiRelation
 	@ManyToOne
 	@JoinColumn(name = "feeder")
-	private User user_id;
+	private User user1;
 
 	@JsonApiRelation
 	@ManyToOne
 	@JoinColumn(name = "user_id")
-	private User user;
+	private User user2;
 
 	public UserFeedback() {
 	}

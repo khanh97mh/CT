@@ -3,6 +3,8 @@ package com.tma.tlab.api.model;
 import java.io.Serializable;
 import javax.persistence.*;
 
+import com.tma.tlab.api.e.EnumQuestionChoice;
+
 import io.katharsis.resource.annotations.JsonApiId;
 import io.katharsis.resource.annotations.JsonApiRelation;
 import io.katharsis.resource.annotations.JsonApiResource;
@@ -24,8 +26,9 @@ public class StudyPlan implements Serializable {
 	@JoinColumn(name = "area_id")
 	private Area area;
 
-	@Column(nullable = false, length = 1)
-	private String completed;
+	@Enumerated(EnumType.STRING)
+	@Column(name = "completed", nullable = false, length = 1)
+	private EnumQuestionChoice completed;
 
 	@JsonApiRelation
 	@ManyToOne
@@ -43,11 +46,11 @@ public class StudyPlan implements Serializable {
 		this.studyPlanId = studyPlanId;
 	}
 
-	public String getCompleted() {
+	public EnumQuestionChoice getCompleted() {
 		return this.completed;
 	}
 
-	public void setCompleted(String completed) {
+	public void setCompleted(EnumQuestionChoice completed) {
 		this.completed = completed;
 	}
 

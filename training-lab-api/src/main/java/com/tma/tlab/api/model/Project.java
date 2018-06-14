@@ -12,6 +12,7 @@ import io.katharsis.resource.annotations.JsonApiResource;
 @Table(name = "project")
 public class Project implements Serializable {
 	private static final long serialVersionUID = 1L;
+
 	@JsonApiId
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

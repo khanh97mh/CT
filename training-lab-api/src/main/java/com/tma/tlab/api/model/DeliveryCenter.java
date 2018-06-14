@@ -23,7 +23,7 @@ public class DeliveryCenter implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "delivery_group_id")
 	private DeliveryGroup deliveryGroup;
-	
+
 	@Column(name = "description")
 	private String description;
 
@@ -40,7 +40,6 @@ public class DeliveryCenter implements Serializable {
 	public void setDeliveryCenterId(Long deliveryCenterId) {
 		this.deliveryCenterId = deliveryCenterId;
 	}
-
 
 	public String getDescription() {
 		return this.description;
