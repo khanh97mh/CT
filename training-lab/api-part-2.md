@@ -142,7 +142,7 @@
 
 * Create tlab-db.sql file in db folder
 
-![image19](/uploads/5736217b35f57a4c74788245c4826da4/image19.PNG)
+![image19](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image19.PNG)
 
 * Add below statements into tlab-db.sql file
 
@@ -186,11 +186,11 @@
 
 * Create model and jpa packages under com.tma.tlab.api
 
-![image20](/uploads/12faed4cca2696e7554f7ca384ad6d97/image20.PNG)
+![image20](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image20.PNG)
 
 * Create Subject class in com.tma.tlab.api.model package
 
-![image21](/uploads/c3d737af17be7bb9b5836a95dc68e2aa/image21.PNG)
+![image21](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image21.PNG)
 
 * Create CommonJpaRepository interface in com.tma.tlab.api.jpa package
 
@@ -255,6 +255,6 @@
 
     Use browser to send request to server - http://localhost:9090/api/, and then check the log on server
 
-![image22](/uploads/8d38d4337585d982ed7836b912a2754c/image22.PNG)
+![image22](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image22.PNG)
 
 
