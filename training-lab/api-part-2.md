@@ -186,11 +186,11 @@
 
 * Create model and jpa packages under com.tma.tlab.api
 
-![image20](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image20.PNG)
+![image20](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image20.PNG)
 
 * Create Subject class in com.tma.tlab.api.model package
 
-![image21](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image21.PNG)
+![image21](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image21.PNG)
 
 * Create CommonJpaRepository interface in com.tma.tlab.api.jpa package
 
@@ -255,6 +255,6 @@
 
     Use browser to send request to server - http://localhost:9090/api/, and then check the log on server
 
-![image22](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image22.PNG)
+![image22](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image22.PNG)
 
 
