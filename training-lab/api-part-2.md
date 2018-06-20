@@ -136,13 +136,13 @@
            </project>
 ```
 
-## 3.  Create place to keep ddl/dml script for this app
+## 3.  Create place to keep ddl/dml script for this app 
 
 * Create db folder under training-lab-api
 
 * Create tlab-db.sql file in db folder
 
-![image19](https://github.com/khanh97mh/CT/tree/master/training-lab/images/image19.PNG)
+![image19](https://github.com/khanh97mh/CT/blob/master/training-lab/images/image19.PNG)
 
 * Add below statements into tlab-db.sql file
 
