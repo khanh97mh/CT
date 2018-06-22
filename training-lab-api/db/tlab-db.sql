@@ -752,7 +752,7 @@ CREATE TABLE `task_template` (
   `description` varchar(255) NOT NULL,
   PRIMARY KEY (`task_template_id`),
   KEY `fk_task_category_idx` (`task_category_id`),
-  CONSTRAINT `fk_task_category` FOREIGN KEY (`task_category_id`) REFERENCES `task_category` (`task_category_id`) ON DELETE CASCADE ON UPDATE CASCADE
+  CONSTRAINT `fk_task_category` FOREIGN KEY (`task_category_id`) REFERENCES `	` (`task_category_id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
